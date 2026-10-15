@@ -1,6 +1,6 @@
 public class Pessoa {
     private String nome;
-    private String cpf;
+    private String cpf;  // cpf como String pois o tipo int descarta zeros à esquerda, além de risco de overflow
     private String email;
 
     public Pessoa(String nome, String cpf, String email) {
