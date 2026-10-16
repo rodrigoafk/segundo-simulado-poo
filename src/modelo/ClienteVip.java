@@ -1,8 +1,10 @@
+package modelo;
+
 public class ClienteVip extends Cliente {
     private double percentualDesconto;
 
     public ClienteVip(String nome, String cpf, String email, String endereco, double percentualDesconto) {
-        // super para utilizar o construtor da classe pai (Cliente), que por sua vez também reutiliza o da classe pai (Pessoa)
+        // super para utilizar o construtor da classe pai (modelo.Cliente), que por sua vez também reutiliza o da classe pai (modelo.Pessoa)
         super(nome, cpf, email, endereco); 
         this.percentualDesconto = percentualDesconto;    
     }

@@ -1,3 +1,5 @@
+package produto;
+
 public abstract class Produto {
   private String codigo;
   private String nome;
@@ -5,6 +7,9 @@ public abstract class Produto {
   private int estoque;
 
   public Produto(String codigo, String nome, double precoBase, int estoque) {
+    if (precoBase < 0) {
+      throw new IllegalArgumentException("O preço base não pode ser negativo");
+    }
     this.codigo = codigo;
     this.nome = nome;
     this.precoBase = precoBase;

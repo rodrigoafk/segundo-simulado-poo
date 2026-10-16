@@ -1,3 +1,5 @@
+package modelo;
+
 public class Pessoa {
     private String nome;
     private String cpf;  // cpf como String pois o tipo int descarta zeros à esquerda, além de risco de overflow

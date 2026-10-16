@@ -1,3 +1,5 @@
+package pagamento;
+
 public class PagamentoPix implements Pagamento {
     public double calcularValorFinal(double valor) {
         return valor * 0.95;

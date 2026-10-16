@@ -1,3 +1,5 @@
+package modelo;
+
 public class Cliente extends Pessoa {
     private String endereco;
     private int pontosFidelidade;
@@ -18,6 +20,10 @@ public class Cliente extends Pessoa {
 
     public int getPontosFidelidade() {
         return this.pontosFidelidade;
+    }
+
+    public void setPontosFidelidade(int pontosFidelidade) {
+        this.pontosFidelidade = pontosFidelidade;
     }
 
     public String toString() {

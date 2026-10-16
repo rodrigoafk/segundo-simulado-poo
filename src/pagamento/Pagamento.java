@@ -1,3 +1,5 @@
+package pagamento;
+
 public interface Pagamento {
     double calcularValorFinal(double valor);
     String getDescricao();

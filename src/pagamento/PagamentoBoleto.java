@@ -1,3 +1,5 @@
+package pagamento;
+
 public class PagamentoBoleto implements Pagamento {
     
     public double calcularValorFinal(double valor) {

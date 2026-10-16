@@ -1,3 +1,5 @@
+package produto;
+
 public class ProdutoDigital extends Produto {
     private int tamanhoMB;
 

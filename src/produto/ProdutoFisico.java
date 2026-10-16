@@ -1,3 +1,7 @@
+package produto;
+
+import entrega.Entregavel;
+
 public class ProdutoFisico extends Produto implements Entregavel {
     private double pesoKg;
 

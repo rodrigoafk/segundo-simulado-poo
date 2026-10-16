@@ -1,3 +1,5 @@
+package produto;
+
 public class Assinatura extends Produto {
     private int meses;
 
