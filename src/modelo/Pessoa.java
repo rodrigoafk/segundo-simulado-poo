@@ -12,7 +12,7 @@ public class Pessoa {
     }
 
     public String toString() {
-        String retorno = String.format("Nome: %s | CPF: %s ", this.nome, this.cpf);
+        String retorno = String.format("Nome: %s | CPF: %s", this.nome, this.cpf);
         return retorno;
     }
 

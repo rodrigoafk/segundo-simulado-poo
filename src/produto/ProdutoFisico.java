@@ -2,6 +2,7 @@ package produto;
 
 import entrega.Entregavel;
 
+// Estende Produto e implementa a interface Entregavel
 public class ProdutoFisico extends Produto implements Entregavel {
     private double pesoKg;
 

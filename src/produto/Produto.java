@@ -32,11 +32,11 @@ public abstract class Produto {
     return this.estoque;
   }
 
-  public abstract double calcularPrecoFinal();
+  public abstract double calcularPrecoFinal(); // cada classe filha é obrigada a implementar o seu próprio cálculo
 
   public String exibirResumo() {
     double precoFinal = calcularPrecoFinal();
-    return String.format("%s %s: R$%.2f", getCodigo(), getNome(), precoFinal);
+    return String.format("%s - %s: R$ %.2f", getCodigo(), getNome(), precoFinal);
   }
 
   public void baixarEstoque(int quantidade) {

@@ -14,11 +14,13 @@ public class CarrinhoDeCompras {
         this.itens = new ArrayList<>(); 
     }
 
+    // Adiciona 1 unidade e reduz estoque
     public void adicionar(Produto p) throws EstoqueInsuficienteException {
         if (p.getEstoque() < 1) {
             throw new EstoqueInsuficienteException(p.getNome(), p.getEstoque());
         }
-        this.itens.add(p);    
+        this.itens.add(p);
+        p.baixarEstoque(1);
     }
 
     public void adicionar(Produto p, int quantidade) throws EstoqueInsuficienteException {
@@ -28,6 +30,7 @@ public class CarrinhoDeCompras {
         for (int i = 1; i <= quantidade; i++) {
             this.itens.add(p);
         }
+        p.baixarEstoque(quantidade);
     }
 
     public double calcularTotal() {
@@ -41,8 +44,8 @@ public class CarrinhoDeCompras {
     public double calcularFreteTotal(String cep) {
         double totalFrete = 0;
 
-        for (Produto item : this.itens) {
-            if (item instanceof Entregavel) {
+        for (Produto item : this.itens) { // Percorrer os elementos da ArrayList
+            if (item instanceof Entregavel) { // instanceof para filtrar só os itens que implementam Entregavel
                 Entregavel produtoEntregavel = (Entregavel) item;
                 totalFrete += produtoEntregavel.calcularFrete(cep);
             }

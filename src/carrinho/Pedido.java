@@ -17,6 +17,7 @@ public class Pedido {
         String cepCliente = cliente.getEndereco();
         double subtotal = carrinho.calcularTotal() + carrinho.calcularFreteTotal(cepCliente);
 
+        // Aplica o desconto se a instância for ClienteVip
         if (this.cliente instanceof ClienteVip) {
             ClienteVip clienteVip = (ClienteVip) cliente;
             double desconto = subtotal * clienteVip.getPercentualDesconto();
@@ -31,7 +32,7 @@ public class Pedido {
 
         } catch (PagamentoRecusadoException e ){
             System.out.println("Pagamento recusado");
-        } finally {
+        } finally { // O bloco finally roda sempre
             System.out.println("Pedido encerrado");
         }
     }
