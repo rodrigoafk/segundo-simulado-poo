@@ -26,6 +26,7 @@ public class Cliente extends Pessoa {
         this.pontosFidelidade = pontosFidelidade;
     }
 
+    @Override
     public String toString() {
         // super.toString() para acessar o respectivo método da classe pai
         String retorno = super.toString() + String.format("| Endereço: %s | Pontos fidelidade: %d ", this.endereco, this.pontosFidelidade); 

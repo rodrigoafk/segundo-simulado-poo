@@ -12,6 +12,7 @@ public class ProdutoDigital extends Produto {
         return this.tamanhoMB;
     }    
 
+    @Override
     public double calcularPrecoFinal() {
         return getPrecoBase() * 0.95;
     }

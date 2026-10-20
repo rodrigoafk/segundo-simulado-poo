@@ -9,6 +9,7 @@ public class ClienteVip extends Cliente {
         this.percentualDesconto = percentualDesconto;    
     }
 
+    @Override
     public String toString() {
         // multiplica-se o percentual por 100 para obter o formato de porcentagem e utiliza-se o Casting Explicito para deixar como int
         int porcentagem = (int) (getPercentualDesconto() * 100); 

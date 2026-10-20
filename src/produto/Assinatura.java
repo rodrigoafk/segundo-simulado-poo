@@ -12,6 +12,7 @@ public class Assinatura extends Produto {
         return this.meses;
     }    
 
+    @Override
     public double calcularPrecoFinal() {
         double total = getPrecoBase() * getMeses();
         if (meses >= 6) return total * 0.90; // Desconto de 10% se for assinatura de 6 meses ou mais

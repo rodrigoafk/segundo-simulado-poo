@@ -11,7 +11,8 @@ public class PagamentoCartao implements Pagamento {
         this.parcelas = parcelas;
         this.limite = limite;
     }
-    
+
+    @Override
     public double calcularValorFinal(double valor) {
         // Taxa de 8% caso seja parcelado em mais de três vezes
         if (this.parcelas > 3) {
@@ -24,6 +25,7 @@ public class PagamentoCartao implements Pagamento {
         return valor;
     }
 
+    @Override
     public String getDescricao() {
         return "Cartão";
     }

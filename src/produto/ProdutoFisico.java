@@ -15,14 +15,17 @@ public class ProdutoFisico extends Produto implements Entregavel {
         return this.pesoKg;
     }
 
+    @Override
     public double calcularPrecoFinal() {
         return getPrecoBase() * 1.10;
     }
 
+    @Override
     public double calcularFrete(String cep) {
         return 15.0 + (getPesoKg() * 2.00);
     }
 
+    @Override
     public int prazoEntregaDias(String cep) {
         if (cep.charAt(0) == '6') return 7;
         return 12;

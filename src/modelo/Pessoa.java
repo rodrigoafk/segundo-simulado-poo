@@ -11,6 +11,8 @@ public class Pessoa {
         this.email = email;
     }
 
+    // sobrescreve o toString da classe Object
+    @Override
     public String toString() {
         String retorno = String.format("Nome: %s | CPF: %s", this.nome, this.cpf);
         return retorno;
